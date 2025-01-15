@@ -44,46 +44,65 @@ export default function ToastDemo() {
         </div>
 
         <div className="space-y-2">
-          <Label className="text-zinc-100">Type:</Label>
-          <RadioGroup
-            value={selectedType}
-            onValueChange={setSelectedType}
-            className="flex flex-wrap gap-4"
-          >
-            <div className="flex items-center space-x-2">
-              <RadioGroupItem 
-                value="success" 
-                id="success"
-                className="h-4 w-4 rounded-full border border-white/50 data-[state=checked]:border-white data-[state=checked]:before:bg-white"
-              />
-              <Label htmlFor="success" className="text-white">Success</Label>
-            </div>
-            <div className="flex items-center space-x-2">
-              <RadioGroupItem 
-                value="error" 
-                id="error"
-                className="h-4 w-4 rounded-full border border-white/50 data-[state=checked]:border-white data-[state=checked]:before:bg-white"
-              />
-              <Label htmlFor="error" className="text-white">Error</Label>
-            </div>
-            <div className="flex items-center space-x-2">
-              <RadioGroupItem 
-                value="warning" 
-                id="warning"
-                className="h-4 w-4 rounded-full border border-white/50 data-[state=checked]:border-white data-[state=checked]:before:bg-white"
-              />
-              <Label htmlFor="warning" className="text-white">Warning</Label>
-            </div>
-            <div className="flex items-center space-x-2">
-              <RadioGroupItem 
-                value="info" 
-                id="info"
-                className="h-4 w-4 rounded-full border border-white/50 data-[state=checked]:border-white data-[state=checked]:before:bg-white"
-              />
-              <Label htmlFor="info" className="text-white">Info</Label>
-            </div>
-          </RadioGroup>
+        <Label className="text-zinc-100">Type:</Label>
+        <RadioGroup
+          value={selectedType}
+          onValueChange={setSelectedType}
+          className="flex items-center gap-6"
+        >
+          {/* Success */}
+          <div className="flex items-center space-x-2">
+            <RadioGroupItem
+              value="success"
+              id="success"
+              className="h-4 w-4 rounded-full border border-white/50 bg-transparent relative 
+                        data-[state=checked]:border-green-500 data-[state=checked]:before:bg-green-500 
+                        data-[state=checked]:before:content-[''] data-[state=checked]:before:absolute 
+                        data-[state=checked]:before:inset-1 data-[state=checked]:before:rounded-full"
+            />
+            <Label htmlFor="success" className="text-white">Success</Label>
           </div>
+
+          {/* Error */}
+          <div className="flex items-center space-x-2">
+            <RadioGroupItem
+              value="error"
+              id="error"
+              className="h-4 w-4 rounded-full border border-white/50 bg-transparent relative 
+                        data-[state=checked]:border-red-500 data-[state=checked]:before:bg-red-500 
+                        data-[state=checked]:before:content-[''] data-[state=checked]:before:absolute 
+                        data-[state=checked]:before:inset-1 data-[state=checked]:before:rounded-full"
+            />
+            <Label htmlFor="error" className="text-white">Error</Label>
+          </div>
+
+          {/* Warning */}
+          <div className="flex items-center space-x-2">
+            <RadioGroupItem
+              value="warning"
+              id="warning"
+              className="h-4 w-4 rounded-full border border-white/50 bg-transparent relative 
+                        data-[state=checked]:border-yellow-500 data-[state=checked]:before:bg-yellow-500 
+                        data-[state=checked]:before:content-[''] data-[state=checked]:before:absolute 
+                        data-[state=checked]:before:inset-1 data-[state=checked]:before:rounded-full"
+            />
+            <Label htmlFor="warning" className="text-white">Warning</Label>
+          </div>
+
+          {/* Info */}
+          <div className="flex items-center space-x-2">
+            <RadioGroupItem
+              value="info"
+              id="info"
+              className="h-4 w-4 rounded-full border border-white/50 bg-transparent relative 
+                        data-[state=checked]:border-blue-500 data-[state=checked]:before:bg-blue-500 
+                        data-[state=checked]:before:content-[''] data-[state=checked]:before:absolute 
+                        data-[state=checked]:before:inset-1 data-[state=checked]:before:rounded-full"
+            />
+            <Label htmlFor="info" className="text-white">Info</Label>
+          </div>
+        </RadioGroup>
+      </div>
 
         <div className="space-y-2">
           <Label htmlFor="position" className="text-zinc-100">Position:</Label>
