@@ -1,11 +1,11 @@
 import { useEffect } from 'react'
-import { AlertCircle, CheckCircle2, Info, X, XCircle } from 'lucide-react'
+import { TriangleAlert, CheckCircle2, Info, X, XCircle } from 'lucide-react'
 import { cn } from '../lib/utils'
 
 const icons = {
   success: CheckCircle2,
   error: XCircle,
-  warning: AlertCircle,
+  warning: TriangleAlert,
   info: Info,
 }
 
