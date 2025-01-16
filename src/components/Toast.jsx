@@ -21,7 +21,6 @@ export function Toast({ id, message, type, onRemove }) {
 
   useEffect(() => {
     return () => {
-      // Cleanup if needed
     }
   }, [id])
 
